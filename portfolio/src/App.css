@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Colitez";
+  src: url("C:\\Users\\hunte\\OneDrive\\Desktop\\ReactApp\\fonts\\ColitezSerif-Italic.otf") format("opentype");
+
+}
+
 .App {
   text-align: center;
 }
@@ -17,22 +23,73 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-left: 15%;
+}
+.App-h1 {
+  font-family: "Colitez";
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  /* animation: fade-out 5s forwards; */
+}
+.App-h1.fade-out-active {
+  animation: fade-out 4s forwards;
+}
+.App-enter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+}
+.App-enter-container.fade-out-active {
+  animation: fade-out 4s forwards;
+}
+.App-enter {
+  font-family: "Colitez";
+  font-size: 3rem;
+  padding: 15px 20px 10px 10px;
+  border: solid 2px #1f2230;
+  border-radius: 10px;
+  background-color: #282c34;
+  color: #ffffff;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+}
+.App-enter.fade-out-active {
+  animation: fade-out 4s forwards;
+}
+.App-enter:hover {
+  background-color: #3a3f52;
+}
+.App-h3 {
+  font-family: "Colitez";
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #bbbbbb;
+}
+.App-h3.fade-out-active {
+  animation: fade-out 4s forwards;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fade-out {
   from {
-    transform: rotate(0deg);
+    opacity: 1;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 0;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  
 }
